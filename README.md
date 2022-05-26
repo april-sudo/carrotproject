@@ -1,5 +1,8 @@
 # carrotproject
 
+## 이벤트 스토밍 결과 
+https://labs.msaez.io/#/storming/eNH2vbsQ2VdRIxex0eP2mQsnr9v2/fa2f9d4b102733c541232239642105f1
+
 
 ## 기능적 요구사항
 
