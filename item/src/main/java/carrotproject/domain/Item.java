@@ -46,11 +46,17 @@ public class Item  {
     public void onPostPersist(){
         ItemRegistered itemRegistered = new ItemRegistered();
         BeanUtils.copyProperties(this, itemRegistered);
+        System.out.println("itemname:" + this.name + "/ " + itemRegistered.getName()) ;
+
         itemRegistered.publishAfterCommit();
     }
 
     @PostUpdate
     public void onPostUpdate(){
+        ItemReserved itemReserved = new ItemReserved();
+        BeanUtils.copyProperties(this, itemReserved);
+        itemReserved.publishAfterCommit();
+      
         ItemModified itemModified = new ItemModified();
         BeanUtils.copyProperties(this, itemModified);
         itemModified.publishAfterCommit();
@@ -58,10 +64,6 @@ public class Item  {
         ItemAvaliableConfirmed itemAvaliableConfirmed = new ItemAvaliableConfirmed();
         BeanUtils.copyProperties(this, itemAvaliableConfirmed);
         itemAvaliableConfirmed.publishAfterCommit();
-
-        ItemReserved itemReserved = new ItemReserved();
-        BeanUtils.copyProperties(this, itemReserved);
-        itemReserved.publishAfterCommit();
 
     }
 

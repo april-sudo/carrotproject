@@ -61,7 +61,7 @@ spec:
     spec:
       containers:
         - name: reservation
-          image: aprilsudo/reservation:v1
+          image: aprilsudo/reservation:v2
           ports:
             - containerPort: 8080
           resources:

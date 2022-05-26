@@ -11,7 +11,6 @@ import org.springframework.beans.BeanUtils;
 import java.util.List;
 import lombok.Data;
 import java.util.Date;
-import carrotproject.ReservationApplication;
 
 @Entity
 @Table(name="Reservation_table")

@@ -15,7 +15,7 @@ spring:
         - id: reservation
           uri: http://localhost:8082
           predicates:
-            - Path=/reservations/** 
+            - Path=/reservations/** http POST http://reservation:8088/reservations rsvPlace="seoul" itemId=1000 rsvStatus="CREATED"
         - id: item
           uri: http://localhost:8083
           predicates:
@@ -23,7 +23,7 @@ spring:
         - id: MyPage
           uri: http://localhost:8084
           predicates:
-            - Path= 
+            - Path=/myPages/**
         - id: frontend
           uri: http://localhost:8080
           predicates:
